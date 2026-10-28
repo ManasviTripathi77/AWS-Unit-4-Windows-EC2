@@ -1,0 +1,43 @@
+AWS UNIT 4 — WINDOWS SERVER EC2 COMMANDS
+
+1. Check Windows Defender Firewall profiles
+
+Get-NetFirewallProfile | Select-Object Name, Enabled
+
+Purpose:
+
+Displays the status of the Domain, Private, and Public firewall profiles.
+
+2. Test RDP connectivity from the local computer
+
+Test-NetConnection -ComputerName YOUR_PUBLIC_IP -Port 3389
+
+Purpose:
+
+Checks whether TCP port 3389 is reachable on the Windows EC2 instance.
+
+Replace YOUR_PUBLIC_IP with the instance's public IPv4 address when running the command. Keep the placeholder in the public GitHub file.
+
+3. Open System Information
+
+msinfo32
+
+Purpose:
+
+Opens the Windows System Information utility.
+
+4. Open Computer Management
+
+compmgmt.msc
+
+Purpose:
+
+Opens Computer Management, where local user accounts can be managed.
+
+5. Open Windows Defender Firewall with Advanced Security
+
+wf.msc
+
+Purpose:
+
+Opens the interface for inspecting Windows Firewall rules and profiles.
